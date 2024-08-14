@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicação Gasto Ifood</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/localizacao.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style2.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/localizacao.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./plataform.js" defer></script>
+  </head>
+  <body>
+    <div class="loader"></div>
+
+    <header class="header">
+      <h1 id="title">Meus gastos</h1>
+      <nav class="navigation">
+        <a href="index.html"><button id="home_button">Home</button></a>
+        <a href="https://www.mediafire.com/file/9xfgmnpsysgefup/ifood_token_extension.rar/file" target="_blank"><button id="get_token_button">Baixar extensão</button></a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="campus">
+        <label for="token">Token</label><br />
+        <input type="text" id="token" name="token" />
+        <button id="calculate_total">Calcular!</button>
+      </section>
+
+      <section class="info">
+        <ul>
+          <li id="money_spent">
+            Você gastou ao todo: <span id="balance"></span>
+          </li>
+          <li id="schedule">Período:<span id="period"></span></li>
+        </ul>
+      </section>
+      <section class="info">
+        <p>Os 3 restaurantes onde você mais gastou foram:</p>
+        <ul id="restaurantes_spents">
+          <li class="datas"><span id="first_spent"></span></li>
+          <li class="datas"><span id="second_spent"></span></li>
+          <li class="datas"><span id="third_spent"></span></li>
+        </ul>
+      </section>
+      <section class="info">
+        <p>Os 3 restaurantes onde você mais fez pedidos foram:</p>
+        <ul id="restaurantes_ordered">
+          <li class="datas"><span id="first_ordered"></span></li>
+          <li class="datas"><span id="second_ordered"></span></li>
+          <li class="datas"><span id="third_ordered"></span></li>
+        </ul>
+      </section>
+      <section class="info">
+        <p>O quanto você gastou em cada forma de pagamento:</p>
+        <ul id="methods_pay_list">
+          <li class="datas">Bank Pay: <span id="bank_pay_balance"></span></li>
+          <li class="datas">Dinheiro: <span id="cash_balance"></span></li>
+          <li class="datas">Crédito: <span id="credit_balance"></span></li>
+          <li class="datas">Débito: <span id="debit_balance"></span></li>
+          <li class="datas">
+            Saldo ifood: <span id="digital_wallet_balance"></span>
+          </li>
+          <li class="datas">Voucher: <span id="voucher_balance"></span></li>
+          <li class="datas">Pix: <span id="pix_balance"></span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Aplicação Gasto Ifood</p>
+      <p>Developed by André e Lucas</p>
+    </footer>
+  </body>
+</html>
